@@ -1,0 +1,101 @@
+//1.引入变量表
+@import './setting.less';
+//2.引入默认样式表
+@import './reset.less';
+//3.引入兼容性样式表 
+@import './normalize.less'; 
+
+body{
+    background-color: @white;
+}
+
+.wjs {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.wjs-content {
+    width: 100%;
+    margin: 0 auto;
+}
+.container {
+    width: @smallWidth;
+    margin: 0 auto;
+}
+
+//顶部导航
+.topnav {
+    width: 100%;
+    height: @topHeight;
+    border: 1px solid @topBorderColor; 
+    background-color: @white;
+    overflow: hidden;
+    .container {
+        > div{
+            float: left;
+            color:@topFontColor;
+            font-size: 12px;
+            line-height: @topHeight;
+            text-align: center;
+            border-left: 1px solid @topBorderColor;
+
+            &:first-child {
+                border: none;
+            }
+        }
+
+        a{
+            color:@topFontColor;
+        }
+    }
+    .qrcode {
+        width: @qrcodeWidth;
+    }
+    .service {
+        width: @serviceWidth;
+    }
+    .extra {
+        width: @extraWidth;
+    }
+    .join {
+        width: @joinWidth;
+        .signup {
+            color: @white;
+            padding: 3px 5px;
+            font-size: 14px;
+            background-color: @signupColor;
+            border-radius: @topRadius;
+        }
+        .signin {
+            font-size: 14px;
+        }
+    }
+
+}
+
+//导航
+.nav {
+    height: @navHeight;
+    width: 100%;
+    border-bottom: 1px solid @topBorderColor;
+    .container {
+       width: @smallWidth;
+        margin: 0 auto;
+    }
+    li {
+        float: left;
+        text-align: center;
+        img {
+            display: block;
+            width :@navImgWidth;
+            vertical-align: middle;
+        }
+        a{
+            color: @navFontColor;
+        }
+    }
+    
+}
+
+
